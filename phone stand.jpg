@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base para Celular Centrada</title>
+    <style>
+        body {
+            background-color: #808080; /* Gris medio */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        
+        /* Estilos para centrar la imagen */
+        .centered-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Alternativa con flexbox */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .code-example {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .notes {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Base para Celular Centrada</h1>
+        
+        <!-- Método 1: Usando margin auto -->
+        <img src="https://via.placeholder.com/300x100/333333/FFFFFF?text=Base+para+Celular" alt="Base para celular" class="centered-image">
+        
+        <div class="code-example">
+            <h3>Código para centrar imagen (método 1):</h3>
+            <pre><code>
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+            </code></pre>
+            
+            <h3>HTML:</h3>
+            <pre><code>
+&lt;img src="ruta/a/tu/imagen.jpg" alt="Descripción" class="centered-image"&gt;
+            </code></pre>
+        </div>
+        
+        <!-- Método 2: Usando flexbox -->
+        <div class="image-container">
+            <img src="https://via.placeholder.com/300x100/222222/FFFFFF?text=Flexbox+Center" alt="Base para celular con flexbox">
+        </div>
+        
+        <div class="code-example">
+            <h3>Código para centrar imagen (método 2 - flexbox):</h3>
+            <pre><code>
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* La imagen no necesita estilos especiales */
+            </code></pre>
+            
+            <h3>HTML:</h3>
+            <pre><code>
+&lt;div class="image-container"&gt;
+    &lt;img src="ruta/a/tu/imagen.jpg" alt="Descripción"&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+        
+        <div class="notes">
+            <h3>Notas importantes:</h3>
+            <ul>
+                <li>Reemplaza "https://via.placeholder.com/..." con la ruta a tu imagen</li>
+                <li>Asegúrate de que la imagen esté en tu proyecto o use una URL válida</li>
+                <li>Si usas una ruta local, coloca la imagen en la misma carpeta que tu HTML o especifica la ruta correcta</li>
+                <li>El método de flexbox es más moderno y flexible para diseños responsivos</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
